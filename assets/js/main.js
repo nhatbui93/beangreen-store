@@ -1,0 +1,57 @@
+
+$(document).ready(function ($) {
+	"use strict";
+	awe_backtotop();
+});
+/* ==== Load plugin when scroll page ==== */
+var is_load = 0;
+function load_after_scroll(){
+    if(is_load) return 
+	is_load = 1;
+	function loadCSS(e, t, n) { "use strict"; var i = window.document.createElement("link"); var o = t || window.document.getElementsByTagName("footer")[0]; i.rel = "stylesheet"; i.href = e; i.media = "only x"; o.parentNode.insertBefore(i, o); setTimeout(function () { i.media = n || "all" }) }loadCSS("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
+}
+$(document).ready(function ($) {
+	!is_load && setTimeout(load_after_scroll,10000)
+	$(window).on('scroll click mousemove touchstart',load_after_scroll);
+});
+
+/*--------------- Back to top button ---------------*/ 
+function awe_backtotop() { 
+	if ($('.back-to-top').length) {
+		var scrollTrigger = 100,
+			backToTop = function () {
+				var scrollTop = $(window).scrollTop();
+				if (scrollTop > scrollTrigger) {
+					$('.back-to-top').addClass('show');
+				} else {
+					$('.back-to-top').removeClass('show');
+				}
+			};
+		backToTop();
+		$(window).on('scroll', function () {
+			backToTop();
+		});
+		$('.back-to-top').on('click', function (e) {
+			e.preventDefault();
+			$('html,body').animate({
+				scrollTop: 0
+			}, 700);
+		});
+	}
+} window.awe_backtotop=awe_backtotop;
+
+/*==== Click nav mobile ====*/
+$('.menubutton').click(function(e){
+	e.stopPropagation();
+	$('.wrapmenu_right').toggleClass('open_sidebar_menu');
+	$('.opacity_menu').toggleClass('open_opacity');
+});
+$('.wrapmenu_right .nav-close').click(function(e) {
+    e.preventDefault();
+    $('.wrapmenu_right').removeClass('open_sidebar_menu');
+	$('.opacity_menu').removeClass('open_opacity');
+});
+$('.opacity_menu').click(function(e){
+	$('.wrapmenu_right').removeClass('open_sidebar_menu');
+	$('.opacity_menu').removeClass('open_opacity');
+});

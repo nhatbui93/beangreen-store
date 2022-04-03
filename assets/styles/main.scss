@@ -1,5 +1,120 @@
-/*================ Gerenal ================*/
-.display_ {display:none;}
+/*==== COMMON ====*/
+html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: var(--fontSize);
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--textColor);
+    font-size: 1.6rem;
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"] {
+    border: 1px solid #e9e9e9;
+    color: #1c1c1c;
+    margin: 0 0 19px;
+    min-height: 40px;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--mainColor);
+    text-decoration: none !important;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    list-style: none outside;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul.square {
+    list-style: square outside;
+}
+
+ul.disc {
+    list-style: disc outside;
+}
+
+ol.alpha {
+    list-style: lower-alpha outside;
+}
+
+.btn {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 10px 34px;
+    text-transform: uppercase;
+    border: none;
+    overflow: hidden;
+    border-radius: 26px;
+    box-shadow: none !important;
+    outline: none;
+}
+.btn span{
+    position: relative;
+    z-index: 2;
+}
+.btn:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 102%;
+    left: -25%;
+    width: 0%;
+    -webkit-transform: skew(-22deg);
+    transform: skew(-22deg);
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    z-index: 1;
+}
+.btn:hover:before {
+    width: 180%;
+}
+@media (max-width: 767px) {
+    .btn {
+        padding: 5px 15px;
+    }
+}
 .lazyload {
 	background:#ebebeb;
 	&.loaded {
@@ -13,5 +128,67 @@
 @media (max-width:767px) {
 	.hidden-xs {
 		display:none!important;
+	}
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+audio, canvas, progress, video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"]{
+	border: 1px solid #e9e9e9;
+	color: #1c1c1c;
+	margin: 0 0 19px;
+	min-height: 40px;
+	padding: 0 20px;
+}
+a{
+	&:hover{
+		color: var(--mainColor);
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
+@media (min-width: 992px){
+	.col-lg-fix-5, .col-xl-fix-5 {
+		flex: 0 0 20% !important;
+		max-width: 20% !important;
+	}
+}
+
+.dropdown-menu{
+	box-shadow: none;
+}
+.dropdown-menu>li>a{
+	white-space: inherit;
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover{
+	background: none;
+}
+
+.opacity_menu {
+	&.open_opacity {
+		content: " ";
+		width: 100%;
+		height:100%;
+		background:rgba(0,0,0,.5);
+		position:fixed;
+		top:0px !important;
+		left:0px;
+		z-index:9999;
 	}
 }
