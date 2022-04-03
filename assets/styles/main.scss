@@ -1,8 +1,17 @@
-html{
-    font-size: 62.5%;
+/*================ Gerenal ================*/
+.display_ {display:none;}
+.lazyload {
+	background:#ebebeb;
+	&.loaded {
+		background:transparent;
+	}
 }
-body {
-    h1 {
-        font-size: 3rem;
-    }
+.hidden {
+	display:none !important;
+}
+
+@media (max-width:767px) {
+	.hidden-xs {
+		display:none!important;
+	}
 }
