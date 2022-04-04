@@ -242,6 +242,18 @@ section.section .titlemodule h2:before {
   z-index: -1;
 }
 
+@media (max-width: 767px) {
+  section.section .titlemodule h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 321px) {
+  section.section .titlemodule h2 {
+    font-size: 1.8rem;
+  }
+}
+
 .item_product_main .product-loop-1 {
   position: relative;
   margin: 0;
@@ -536,6 +548,13 @@ section.section .titlemodule h2:before {
   }
   .item_product_main .product-loop-1:hover .product-action {
     display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .item_product_main .product-loop-1 .product-action .btn.btn-cart {
+    height: 25px;
+    line-height: 25px;
   }
 }
 /*# sourceMappingURL=main.css.map */

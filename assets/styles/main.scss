@@ -224,6 +224,16 @@ section.section{
                 z-index: -1;
             }
         }
+        @media (max-width: 767px) {
+            h2{
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 321px) {
+            h2{
+                font-size: 1.8rem;
+            }
+        }
     }
 }
 .item_product_main{
@@ -489,6 +499,12 @@ section.section{
                 .product-action{
                     display: block;
                 }
+            }
+        }
+        @media (max-width: 480px) {
+            .product-action .btn.btn-cart {
+                height: 25px;
+                line-height: 25px;
             }
         }
     }
