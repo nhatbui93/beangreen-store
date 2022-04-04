@@ -63,3 +63,63 @@ $('.opacity_menu, .cart_btn-close').click(function(e){
 	$('.cart_sidebar').removeClass('active');
 	$('.opacity_menu').removeClass('open_opacity');
 });
+
+/*==== Slider index ====*/
+$(document).ready(function ($) {
+	var swiperSlider = new Swiper('.home-slider', {
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			el: '.home-slider .swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.home-slider .swiper-button-next',
+			prevEl: '.home-slider .swiper-button-prev',
+		},
+	});
+
+	/*==== Slider Policy ====*/
+	var swiperPolicy = new Swiper('.slickpoli', {
+		spaceBetween: 0,
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+	
+			768: {
+				slidesPerView: 3,
+			},
+	
+			1024: {
+				slidesPerView: 4,
+			},
+		},
+	});
+
+	/*==== Slider Product Hot ====*/
+	var swiperProHot = new Swiper('.product-hot-slider', {
+		spaceBetween: 30,
+		breakpoints: {
+			0: {
+				slidesPerView: 2,
+				spaceBetween: 14,
+			},
+	
+			768: {
+				slidesPerView: 3,
+			},
+	
+			1024: {
+				slidesPerView: 4,
+			},
+		},
+		navigation: {
+			nextEl: '.product-hot-slider .swiper-button-next',
+			prevEl: '.product-hot-slider .swiper-button-prev',
+		},
+	});
+});
+

@@ -23,10 +23,12 @@
         }
     </style>
     <link href="./assets/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/swiper.css" rel="stylesheet" type="text/css" />
     <link href="./assets/styles/main.css" rel="stylesheet" type="text/css" />
     <link href="./assets/styles/index.css" rel="stylesheet" type="text/css" />
     <script src="./assets/js/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
     <script src="./assets/js/lazyload-min.js" type="text/javascript"></script>
+    <script src="./assets/js/swiper.js" type="text/javascript"></script>
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -69,6 +71,7 @@
 <body>
     <div class="opacity_menu"></div>
     <div class="inbody clearfix">
+        <!-- HEADER -->
         <header class="header wraphead_mobile" id="header">
             <div class="container">
                 <div class="header_top">
@@ -91,8 +94,8 @@
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="a-img" href="#" title="Nổi bật">
-                                                    <span>Nổi bật</span>
+                                                <a class="a-img" href="#section-product-hot" title="HOT NHẤT">
+                                                    <span>HOT nhất</span>
                                                 </a>
                                             </li>
                                             <li class="nav-item">
@@ -147,7 +150,7 @@
                         <svg viewBox="0 0 512 512" width="30" height="30"> <g fill="#333"> <path d="M342.3,132.9c-5.3-5.3-13.8-5.3-19.1,0l-85.6,85.6L152,132.9c-5.3-5.3-13.8-5.3-19.1,0c-5.3,5.3-5.3,13.8,0,19.1 l85.6,85.6l-85.6,85.6c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4l85.6-85.6l85.6,85.6c2.6,2.6,6.1,4,9.5,4 c3.5,0,6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1l-85.4-85.6l85.6-85.6C347.6,146.7,347.6,138.2,342.3,132.9z"></path> </g> </svg>
                     </a>
                     <div class="containers">
-                        <!-- Menu mobile -->
+                        <!-- MENU MOBILE -->
                         <div class="menu_mobile clearfix">
                             <ul class="ul_collections">
                                 <li class="level0 level-top parent">
@@ -179,11 +182,314 @@
         </div>
 
         <h1 class="store-name d-none">Bean Green Store</h1>
+        <!-- SECTION HOME -->
+        <section class="section section-home" id="section-home">
+            <div class="container">
+                <div class="row">
+                    <div class="section_slider col-12 clearfix">
+                        <div class="home-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#" class="clearfix" title="Slider 1">
+                                        <img src="/assets/images/slide_1_img.jpg" alt="Slider 1" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="clearfix" title="Slider 2">
+                                        <img src="/assets/images/slide_2_img.jpg" alt="Slider 2" class="img-fluid" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- SECTION POLICY -->
+        <section class="section section-policy" id="section-policy">
+            <div class="container">
+                <div class="widget-inner ">
+                    <div class="slickpoli swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class=" item swiper-slide">
+                                <div class="policy-item">
+                                    <div class="media flexbox">
+                                        <img width="43" height="27" class="img-fluid lazyload" data-src="/assets/images/icons/policy1.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                            alt="Freeship">
+                                    </div>
+                                    <div class="info">
+                                        <span>Freeship</span>
+                                        <p>Miễn phí vận chuyển</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" item swiper-slide">
+                                <div class="policy-item">
+                                    <div class="media flexbox">
+                                        <img width="43" height="27" class="img-fluid lazyload" data-src="/assets/images/icons/policy2.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                            alt="Hoàn trả">
+                                    </div>
+                                    <div class="info">
+                                        <span>Hoàn trả</span>
+                                        <p>Trong 30 ngày miễn phí</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" item swiper-slide">
+                                <div class="policy-item">
+                                    <div class="media flexbox">
+                                        <img width="43" height="27" class="img-fluid lazyload" data-src="/assets/images/icons/policy3.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                            alt="Thanh toán">
+                                    </div>
+                                    <div class="info">
+                                        <span>Thanh toán</span>
+                                        <p>Hỗ trợ nhiều hình thức</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" item swiper-slide">
+                                <div class="policy-item">
+                                    <div class="media flexbox">
+                                        <img width="43" height="27" class="img-fluid lazyload" data-src="/assets/images/icons/policy4.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                            alt="Hỗ trợ">
+                                    </div>
+                                    <div class="info">
+                                        <span>Hỗ trợ</span>
+                                        <p>24/7</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- SECTION PRODUCT HOT -->
+        <section class="section section-product-hot" id="section-product-hot">
+            <div class="container">
+                <div class="titlemodule text-center">
+                    <h2>
+                        Sản phẩm hot
+                    </h2>
+                </div>
+                <div class="clearfix list-product">
+                    <div class="product-hot-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item_product_main">
+                                    <div class="product-loop-1 product-base">
+                                        <div class="product-thumbnail">
+                                            <div class="saleright">- 12% </div>
+                                            <a class="image_link image_thumb display_flex scale_hover xem_nhanh quick-view" href="/trang-suc-nhan-nu-vang-trang-18k-dinh-kim-cuong" data-handle="trang-suc-nhan-nu-vang-trang-18k-dinh-kim-cuong" title="Trang sức nhẫn nữ vàng trắng 18K đính kim cương">
+                                                <img class="lazyload" data-src="//bizweb.dktcdn.net/thumb/large/100/368/547/products/01-8db0b522-a118-4fbf-8adf-5782bb583774.jpg?v=1577016901000" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                    alt="Trang sức nhẫn nữ vàng trắng 18K đính kim cương">
+                                            </a>
+                                        </div>
+                                        <div class="product-info a-center">
+                                            <h3 class="product-name">
+                                                <a class="xem_nhanh quick-view" href="/trang-suc-nhan-nu-vang-trang-18k-dinh-kim-cuong" title="Trang sức nhẫn nữ vàng trắng 18K đính kim cương" tabindex="0">Trang sức nhẫn nữ vàng trắng 18K đính kim cương</a>
+                                            </h3>
+                                            <div class="product-hideoff">
+                                                <div class="product-hide">
+                                                    <div class="price-box clearfix">
+                                                        <div class="old-price">
+                                                            <span class="price product-price-old">
+                                                                9.600.000₫			
+                                                            </span>
+                                                        </div>
+                                                        <div class="special-price">
+                                                            <span class="price product-price">8.400.000₫</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-action clearfix">
+                                            <form class="variants form-nut-grid" data-id="product-actions-16575294">
+                                                <div class="group_action">
+                                                    <input type="hidden" name="variantId" value="29753216" tabindex="0">
+                                                    <button class="btn-buy btn-cart btn btn-circle left-to add_to_cart " title="Đặt hàng ngay" tabindex="0">
+                                                        Mua ngay
+                                                    </button>
+                                                    <a title="Xem ngay" href="/trang-suc-nhan-nu-vang-trang-18k-dinh-kim-cuong" data-handle="trang-suc-nhan-nu-vang-trang-18k-dinh-kim-cuong" class="xem_nhanh btn-circle btn_view btn right-to quick-view" tabindex="0">
+                                                        Xem ngay
+                                                    </a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION BANNER -->
+        <section class="section section-banner" id="section-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                        <div class="adv_bottom_inner">
+                            <figure class="img_effect">
+                                <a class="scale_hover" href="#" title="Banner 1">
+                                    <img class="lazyload img-fluid" data-src="/assets/images/banners/2banner_1.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                        alt="Banner 1">
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                        <div class="adv_bottom_inner">
+                            <figure class="img_effect">
+                                <a class="scale_hover" href="#" title="Banner 2">
+                                    <img class="lazyload img-fluid" data-src="/assets/images/banners/2banner_2.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                        alt="Banner 2">
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
         <footer class="footer" id="footer">
+            <div class="site-footer">
+                <div class="mid-footer clearfix">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <div class="widget_first_childs margin-top-0">
+                                    <div class="logo_footer" style="margin-bottom: 20px;">
+                                        <a href="/" class="logo-wrapper">
+                                            <img class="lazyload" data-src="/assets/images/logo.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="logo"
+                                                width="300" height="70">
+                                        </a>
+                                    </div>
+                                    <div class="widget-ft-top">
+                                        <div class="time_work">
+                                            <div class="itemfooter cont">
+                                                <div class="r">
+                                                    <i class="fas fa-map-marker-alt"></i>
+                                                    <span>57 Đô Đốc Lộc, Phường Tân Quý, Quận Tân Phú, Tp.HCM</span>
+                                                </div>
+                                                <div class="r">
+                                                    <i class="fas fa-phone"></i>
+                                                    <a class="fone" href="tel:0366246626" title="Phone">036.6246.626</a>
+                                                </div>
+                                                <div class="r">
+                                                    <i class="fas fa-envelope"></i>
+                                                    <a class="mail_" href="mailto:nhatbui1293@gmail.com" title="Email">nhatbui1293@gmail.com</a>
+                                                </div>
+                                                <div class="r">
+                                                    <i class="fab fa-facebook"></i>
+                                                    <a class="facebook_" href="https://www.facebook.com/nhat.bui.105" target="_blank" title="Facebook">facebook.com/nhat.bui.105</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-xs-12">
+                                <div class="content-right clearfix">
+                                    <form id="form-messenger" target="_self" onsubmit="" action="javascript: postToGoogle()">
+                                        <div class="row group_contact">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="row">
+                                                    <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                        <input placeholder="Họ tên" type="text" class="form-control  form-control-lg" required="" value="" name="fullname" id="contactFormName">
+                                                    </fieldset>
+                                                    <fieldset class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                        <input placeholder="Email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="" id="contactFormEmail" class="form-control form-control-lg" value="" name="email">
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <fieldset>
+                                                <textarea placeholder="Nội dung" name="messenger" id="contactFormMesseger" class="form-control content-area form-control-lg" rows="3" required=""></textarea>
+                                            </fieldset>
+                                            <fieldset class="text-right">
+                                                <span id="sc_form" class="alert alert-success" style="display: none;"></span>
+                                                <button type="submit" class="btn btn-main btn-primary btn-lienhe" id="send_messenger" title="Gửi">Gửi</button>
+                                            </fieldset>
+                                        </div>
+                                    </form>
+                                    <script>
+                                        function postToGoogle() {
+                                            $('#sc_form').removeClass('alert-success').addClass('alert-info').show().text('Vui lòng chờ giây lát...');
+                                            var field1 = $("#contactFormName").val();
+                                            var field2 = $('#contactFormEmail').val();
+                                            var field3 = $('#contactFormMesseger').val();
+                                            $.ajax({
+                                                url: "https://docs.google.com/forms/u/2/d/e/1FAIpQLSdel2_soMegSFsrl0Jvbf9Tf7c0sywIlqlsytOWGY3y6UB35A/formResponse",
+                                                data: {
+                                                    "entry.229177598": field1,
+                                                    "entry.431091025": field2,
+                                                    "entry.990487759": field3
+                                                },
+                                                type: "POST",
+                                                dataType: "xml",
+                                                statusCode: {
+                                                    0: function() {
+                                                        setTimeout(function() {
+                                                            $('#sc_form').show().removeClass('alert-info').addClass('alert-success').text('Thông tin của bạn đã được gửi thành công.');
+                                                            $('#form-messenger input, #form-messenger textarea').val('');
+                                                            setTimeout(function() {
+                                                                $('#sc_form').hide();
+                                                            }, 3000)
+                                                        }, 1000);
+                                                    },
+                                                    200: function() {
+                                                        setTimeout(function() {
+                                                            $('#sc_form').show().removeClass('alert-info').addClass('alert-success').text('Thông tin của bạn đã được gửi thành công.');
+                                                            $('#form-messenger input, #form-messenger textarea').val('');
+                                                            setTimeout(function() {
+                                                                $('#sc_form').hide();
+                                                            }, 3000)
+                                                        }, 1000);
+                                                    }
+                                                }
+                                            });
+                                        }
+                                    </script>
+                                </div>
+                            </div>
 
+                        </div>
+
+                    </div>
+                    <div class="bg-footer-bottom copyright clearfix">
+                        <div class="container">
+                            <div class="inner clearfix">
+                                <div class="row tablet">
+                                    <div id="copyright" class="col-lg-9 col-md-9 col-sm-9 col-12 text-left fot_copyright">
+                                        <div class="wsp">
+                                            <span class="opacity1">Website được thiết kế bởi <b>NhatBui</b></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 icon_footer text-right">
+                                        <a href="/" class="bocongthuong">
+                                            <img src="//bizweb.dktcdn.net/100/368/547/themes/856980/assets/bct.png?1649038677616" alt="Bean Jewelry">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="back-to-top" title="Lên đầu trang">
+                <img src="assets/images/icons/up-arrow.svg" alt="Back to top" width="20" height="20">
+            </div>
         </footer>
+
         <!-- POPUP CART -->
         <div class="cart_sidebar" id="cart-sidebars">
             <div class="evo-cart-content">
@@ -213,7 +519,7 @@
                                     <div><label class="cart_quantity">Số lượng</label>
                                         <div class="cart_select">
                                             <div class="input-group-btn"><input class="variantID" type="hidden" name="variantId" value="40269989"><button onclick="var result = document.getElementById('qtyItem40269989'); var qtyItem40269989 = result.value; if( !isNaN(qtyItem40269989) && qtyItem40269989 > 1 ) result.value--;return false;"
-                                                     class="reduced items-count btn-minus btn btn-default" type="button">–</button><input type="text" maxlength="3" min="0" class="input-text number-sidebar qtyItem40269989" id="qtyItem40269989" name="Lines"
+                                                    class="reduced items-count btn-minus btn btn-default" type="button">–</button><input type="text" maxlength="3" min="0" class="input-text number-sidebar qtyItem40269989" id="qtyItem40269989" name="Lines"
                                                     size="4" value="1"><button onclick="var result = document.getElementById('qtyItem40269989'); var qtyItem40269989 = result.value; if( !isNaN( qtyItem40269989 )) result.value++;return false;" class="increase items-count btn-plus btn btn-default"
                                                     type="button">+</button></div>
                                         </div>
@@ -235,7 +541,7 @@
                                     <div><label class="cart_quantity">Số lượng</label>
                                         <div class="cart_select">
                                             <div class="input-group-btn"><input class="variantID" type="hidden" name="variantId" value="40269989"><button onclick="var result = document.getElementById('qtyItem40269989'); var qtyItem40269989 = result.value; if( !isNaN(qtyItem40269989) && qtyItem40269989 > 1 ) result.value--;return false;"
-                                                     class="reduced items-count btn-minus btn btn-default" type="button">–</button><input type="text" maxlength="3" min="0" class="input-text number-sidebar qtyItem40269989" id="qtyItem40269989" name="Lines"
+                                                    class="reduced items-count btn-minus btn btn-default" type="button">–</button><input type="text" maxlength="3" min="0" class="input-text number-sidebar qtyItem40269989" id="qtyItem40269989" name="Lines"
                                                     size="4" value="1"><button onclick="var result = document.getElementById('qtyItem40269989'); var qtyItem40269989 = result.value; if( !isNaN( qtyItem40269989 )) result.value++;return false;" class="increase items-count btn-plus btn btn-default"
                                                     type="button">+</button></div>
                                         </div>
