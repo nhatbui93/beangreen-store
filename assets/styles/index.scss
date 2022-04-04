@@ -903,7 +903,7 @@ header.wraphead_mobile {
 					.ico-cart{
 						height: 200px;
 						width: 200px;
-						background-image: url('/assets/images/icons/mobile-shopping.svg');
+						background-image: url('../images/icons/mobile-shopping.svg');
 						background-size: contain;
 						background-repeat: no-repeat;
 						display: block;
@@ -979,38 +979,45 @@ header.wraphead_mobile {
 								color: #333;
 							}
 							.cart_select{
-								button{
-									border-radius: 0;
-									border: 1px solid #e5e5e5;
-									border-color: #e5e5e5;
-									color: #222;
-									line-height: 26px;
-									padding: 0;
-									margin: 0;
-									width: 28px;
-									background-color: #fff;
-									height: 28px;
-									&.btn-minus{
-										float: left;
-										border-right: 0;
+								.input-group-btn {
+									display: flex;
+									align-items: center;
+									margin-top: 5px;
+									button{
+										border-radius: 0;
+										border: 1px solid #e5e5e5;
+										border-color: #e5e5e5;
+										color: #222;
+										line-height: 26px;
+										padding: 0;
+										margin: 0;
+										width: 28px;
+										background-color: #fff;
+										height: 28px;
+										&.btn-minus{
+											float: left;
+											border-right: 0;
+										}
+										&.btn-plus{
+											float: left;
+											border-left: 0;
+										}
 									}
-									&.btn-plus{
-										float: left;
-										border-left: 0;
+									input{
+										display: inline-block;
+										height: 28px;
+										padding: 0;
+										text-align: center;
+										border-radius: 0;
+										width: 35px;
+										min-height: 28px;
+										border: 1px solid #e5e5e5;
+										color: #222;
+										height: 28px;
+										margin: 0;
+										outline: none;
+										font-size: 1.4rem;
 									}
-								}
-								input{
-									display: inline-block;
-									height: 28px;
-									padding: 0;
-									text-align: center;
-									border-radius: 0;
-									width: 35px;
-									min-height: 28px;
-									border: 1px solid #e5e5e5;
-									color: #222;
-									height: 28px;
-									margin: 0;
 								}
 							}
 						}

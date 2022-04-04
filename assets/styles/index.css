@@ -1077,7 +1077,7 @@ header.wraphead_mobile .cartsearch .carthd .mini-cart .icon_cart .text_gh {
 .cart_sidebar .evo-cart-content .cart_body .cart-empty .empty-icon .ico-cart {
   height: 200px;
   width: 200px;
-  background-image: url("/assets/images/icons/mobile-shopping.svg");
+  background-image: url("../images/icons/mobile-shopping.svg");
   background-size: contain;
   background-repeat: no-repeat;
   display: block;
@@ -1171,7 +1171,17 @@ header.wraphead_mobile .cartsearch .carthd .mini-cart .icon_cart .text_gh {
   color: #333;
 }
 
-.cart_sidebar .evo-cart-content .cart_body .cart_product .cart_info .row-cart-left .cart_item_name .cart_select button {
+.cart_sidebar .evo-cart-content .cart_body .cart_product .cart_info .row-cart-left .cart_item_name .cart_select .input-group-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
+}
+
+.cart_sidebar .evo-cart-content .cart_body .cart_product .cart_info .row-cart-left .cart_item_name .cart_select .input-group-btn button {
   border-radius: 0;
   border: 1px solid #e5e5e5;
   border-color: #e5e5e5;
@@ -1184,17 +1194,17 @@ header.wraphead_mobile .cartsearch .carthd .mini-cart .icon_cart .text_gh {
   height: 28px;
 }
 
-.cart_sidebar .evo-cart-content .cart_body .cart_product .cart_info .row-cart-left .cart_item_name .cart_select button.btn-minus {
+.cart_sidebar .evo-cart-content .cart_body .cart_product .cart_info .row-cart-left .cart_item_name .cart_select .input-group-btn button.btn-minus {
   float: left;
   border-right: 0;
 }
 
-.cart_sidebar .evo-cart-content .cart_body .cart_product .cart_info .row-cart-left .cart_item_name .cart_select button.btn-plus {
+.cart_sidebar .evo-cart-content .cart_body .cart_product .cart_info .row-cart-left .cart_item_name .cart_select .input-group-btn button.btn-plus {
   float: left;
   border-left: 0;
 }
 
-.cart_sidebar .evo-cart-content .cart_body .cart_product .cart_info .row-cart-left .cart_item_name .cart_select input {
+.cart_sidebar .evo-cart-content .cart_body .cart_product .cart_info .row-cart-left .cart_item_name .cart_select .input-group-btn input {
   display: inline-block;
   height: 28px;
   padding: 0;
@@ -1206,6 +1216,8 @@ header.wraphead_mobile .cartsearch .carthd .mini-cart .icon_cart .text_gh {
   color: #222;
   height: 28px;
   margin: 0;
+  outline: none;
+  font-size: 1.4rem;
 }
 
 .cart_sidebar .evo-cart-content .cart_body .cart_product .cart_info .row-cart-left .cart_prices {
