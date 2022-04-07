@@ -2276,7 +2276,6 @@ footer.footer .back-to-top.show {
   z-index: 99999;
   -webkit-box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1);
   box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ddd;
 }
 
 #checkout-modal .modal-header {
