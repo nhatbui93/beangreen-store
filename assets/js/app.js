@@ -198,13 +198,11 @@ const yourCart = {
         let listItems = this.listProduct;
         for(var i = 0 ;i < listItems.length; i++) {
             let totalLine = parseFloat(listItems[i].price) * listItems[i].qty;
-            console.log(parseFloat(listItems[i].price));
             resultPrice.push(totalLine);
         }
         const result = resultPrice.reduce(function(result, item){
             return result + item;
         }, 0)
-       console.log('total result', result);
        $('.cart_sidebar .total-price').text(String(result).replace(/(.)(?=(\d{3})+$)/g,'$1.')+'₫');
     },
 
