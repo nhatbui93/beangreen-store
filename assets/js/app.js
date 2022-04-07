@@ -298,7 +298,12 @@ function getAPI (callback){
     const postAPI = 'https://nhatbui93.github.io/repo-json/products.json';
     fetch(postAPI)
     .then(response => response.json())
-    .then(callback);
+    .then(callback)
+    .catch(err =>{
+        const html = '<div class="alert alert-danger col-12">Không tải được dữ liệu. Vui lòng F5 lại trang để thử lại.</div>';
+        const listCol = $('.product-col-slider');
+        listCol.removeClass('d-none').next('.row').html(html);
+    });
 }
 /* ==== Render collection ==== */
 function renderProducts(arrProducts) {
