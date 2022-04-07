@@ -1877,7 +1877,7 @@ footer.footer {
 	}
 	@media (max-width: 569px) {
 			width: calc(100% - 30px);
-			height: calc(100vh - 60px);
+			height: calc(100% - 80px);
 		.popup-body {
 			padding:  10px !important;
 		}
@@ -1899,7 +1899,7 @@ footer.footer {
 	-webkit-box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1);
     box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1);
 	@media (max-width:569px) {
-		height: calc(100vh - 60px);
+		height: calc(100% - 80px);
 	}
 	.modal-header {
 		display: flex;

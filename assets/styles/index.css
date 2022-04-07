@@ -2254,7 +2254,7 @@ footer.footer .back-to-top.show {
 @media (max-width: 569px) {
   #quick-view-product {
     width: calc(100% - 30px);
-    height: calc(100vh - 60px);
+    height: calc(100% - 80px);
   }
   #quick-view-product .popup-body {
     padding: 10px !important;
@@ -2280,7 +2280,7 @@ footer.footer .back-to-top.show {
 
 @media (max-width: 569px) {
   #checkout-modal {
-    height: calc(100vh - 60px);
+    height: calc(100% - 80px);
   }
 }
 
