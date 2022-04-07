@@ -2310,8 +2310,8 @@ footer.footer .back-to-top.show {
 
 #checkout-modal .modal-header .checkout_btn_close {
   position: absolute;
-  top: -15px;
-  right: -15px;
+  top: -10px;
+  right: -10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
