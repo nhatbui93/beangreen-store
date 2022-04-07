@@ -1626,8 +1626,8 @@ footer.footer {
     z-index: 99999;
 	.quick_btn_close {
 		position: absolute;
-		top: -15px;
-		right: -15px;
+		top: -10px;
+		right: -10px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -1877,7 +1877,7 @@ footer.footer {
 	}
 	@media (max-width: 569px) {
 			width: calc(100% - 30px);
-			height: 90vh;
+			height: calc(100vh - 60px);
 		.popup-body {
 			padding:  10px !important;
 		}
@@ -1898,6 +1898,9 @@ footer.footer {
     z-index: 99999;
 	-webkit-box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1);
     box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1);
+	@media (max-width:569px) {
+		height: calc(100vh - 60px);
+	}
 	.modal-header {
 		display: flex;
 		align-items: center;
