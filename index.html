@@ -29,6 +29,7 @@
     <script src="./assets/js/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
     <script src="./assets/js/lazyload-min.js" type="text/javascript"></script>
     <script src="./assets/js/swiper.js" type="text/javascript"></script>
+    <script src="./assets/js/sticky.js" type="text/javascript"></script>
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -539,9 +540,9 @@
                                     <script>
                                         function postToGoogle() {
                                             $('#sc_form').removeClass('alert-success').addClass('alert-info').show().text('Vui lòng chờ giây lát...');
-                                            var field1 = $("#contactFormName").val();
-                                            var field2 = $('#contactFormEmail').val();
-                                            var field3 = $('#contactFormMesseger').val();
+                                            let field1 = $("#contactFormName").val();
+                                            let field2 = $('#contactFormEmail').val();
+                                            let field3 = $('#contactFormMesseger').val();
                                             $.ajax({
                                                 url: "https://docs.google.com/forms/u/2/d/e/1FAIpQLSdel2_soMegSFsrl0Jvbf9Tf7c0sywIlqlsytOWGY3y6UB35A/formResponse",
                                                 data: {
@@ -615,70 +616,158 @@
                             <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
                         </svg>
                     </div>
-                    <div class="cart_body">
-                        <div class="cart-empty d-none">
-                            <span class="empty-icon">
-                                <i class="ico ico-cart"></i>
-                            </span>
-                            <div class="btn-cart-empty">
-                                <a class="btn btn-default" href="/beangreen-store" title="Tiếp tục mua sắm">Tiếp tục mua sắm</a>
-                            </div>
+                </div>
+                <div class="cart_body"> 
+                    <div class="cart-empty">
+                        <span class="empty-icon">
+                            <i class="ico ico-cart"></i>
+                        </span>
+                        <div class="btn-cart-empty">
+                            <a class="btn btn-default cart_btn-close" href="javascript:void(0);" title="Tiếp tục mua sắm">Tiếp tục mua sắm</a>
                         </div>
-                        <div class="clearfix cart_product productid-40269989">
-                            <a class="cart_image" href="/samsung-galaxy-s20-ultra" title="Samsung Galaxy S20 Ultra">
-                                <img src="//bizweb.dktcdn.net/thumb/medium/100/415/483/products/637170935875912528-ss-s20-ultra-den-1.png" class="img-fluid" alt="Samsung Galaxy S20 Ultra"></a>
-                            <div class="cart_info">
-                                <div class="cart_name"><a href="/samsung-galaxy-s20-ultra" title="Samsung Galaxy S20 Ultra">Samsung Galaxy S20 Ultra</a></div>
-                                <div class="row-cart-left">
-                                    <div class="cart_item_name"><label class="cart_size variant-title-popup d-none" style="display: none;">Default Title</label>
-                                        <div><label class="cart_quantity">Số lượng</label>
-                                            <div class="cart_select">
-                                                <div class="input-group-btn"><input class="variantID" type="hidden" name="variantId" value="40269989"><button onclick="var result = document.getElementById('qtyItem40269989'); var qtyItem40269989 = result.value; if( !isNaN(qtyItem40269989) && qtyItem40269989 > 1 ) result.value--;return false;"
-                                                        class="reduced items-count btn-minus btn btn-default" type="button">–</button><input type="text" maxlength="3" class="input-text number-sidebar qtyItem40269989" id="qtyItem40269989" name="Lines" size="4"
-                                                        value="1"><button onclick="var result = document.getElementById('qtyItem40269989'); var qtyItem40269989 = result.value; if( !isNaN( qtyItem40269989 )) result.value++;return false;" class="increase items-count btn-plus btn btn-default"
-                                                        type="button">+</button></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="text-right cart_prices">
-                                        <div class="cart__price"><span class="cart__sale-price">27.000.000₫</span></div><a class="cart__btn-remove remove-item-cart" href="javascript:void(0)" data-id="40269989" title="Bỏ sản phẩm">Bỏ sản phẩm</a></div>
+                    </div>
+                </div>
+                <div class="cart-footer d-none">
+                    <hr>
+                    <div class="clearfix">
+                        <div class="cart__subtotal">
+                            <div class="cart__col-6">Tổng tiền:</div>
+                            <div class="text-right cart__totle"><span class="total-price"></span></div>
+                        </div>
+                    </div>
+                    <div class="cart__btn-proceed-checkout-dt">
+                        <button type="button" class="button btn btn-default cart__btn-proceed-checkout" id="btn-proceed-checkout" title="Thanh toán">Thanh toán</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- POPUP CHECKOUT -->
+        <div class="checkout-modal" id="checkout-modal" style="display: none;">
+            <div class="modal-header">
+                <h2>Thanh toán</h2>
+                <div class="checkout_btn_close" title="Đóng cửa sổ">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="popup-body">
+                <div class="checkout-block">
+                    <div class="row">
+                        <div class="col-12 col-xs-12 col-md-12 col-lg-6 order-lg-1 col-right">
+                            <div class="info-pay">
+                                <h3 id="header-item-checkout">Đơn hàng (<span class="count_item_checkout"></span> Sản phẩm)</h3>
+                                <div id="body-item-checkout"></div>
+                                <div id="footer-item-checkout">
+                                    
                                 </div>
                             </div>
                         </div>
-
-                        <div class="clearfix cart_product productid-40269989">
-                            <a class="cart_image" href="/samsung-galaxy-s20-ultra" title="Samsung Galaxy S20 Ultra">
-                                <img src="//bizweb.dktcdn.net/thumb/medium/100/415/483/products/637170935875912528-ss-s20-ultra-den-1.png" class="img-fluid" alt="Samsung Galaxy S20 Ultra"></a>
-                            <div class="cart_info">
-                                <div class="cart_name"><a href="/samsung-galaxy-s20-ultra" title="Samsung Galaxy S20 Ultra">Samsung Galaxy S20 Ultra</a></div>
-                                <div class="row-cart-left">
-                                    <div class="cart_item_name"><label class="cart_size variant-title-popup d-none" style="display: none;">Default Title</label>
-                                        <div><label class="cart_quantity">Số lượng</label>
-                                            <div class="cart_select">
-                                                <div class="input-group-btn"><input class="variantID" type="hidden" name="variantId" value="40269989"><button onclick="var result = document.getElementById('qtyItem40269989'); var qtyItem40269989 = result.value; if( !isNaN(qtyItem40269989) && qtyItem40269989 > 1 ) result.value--;return false;"
-                                                        class="reduced items-count btn-minus btn btn-default" type="button">–</button><input type="text" maxlength="3" class="input-text number-sidebar qtyItem40269989" id="qtyItem40269989" name="Lines" size="4"
-                                                        value="1"><button onclick="var result = document.getElementById('qtyItem40269989'); var qtyItem40269989 = result.value; if( !isNaN( qtyItem40269989 )) result.value++;return false;" class="increase items-count btn-plus btn btn-default"
-                                                        type="button">+</button></div>
-                                            </div>
-                                        </div>
+                        <div class="col-12 col-xs-12 col-md-12 col-lg-6 col-left">
+                            <div class="form__client-pay">
+                                <form id="form-checkout" target="_self" onsubmit=""  action="javascript: postToGoogle2()">
+                                    <h3 class="text-center">THÔNG TIN KHÁCH HÀNG</h3>
+                                    <p class="desc">Vui lònng nhập các trường thông tin bắt buộc (*)</p>
+                                    <div class="form-group">
+                                        <label for="fullname" class="form-label">Họ tên (*)</label>
+                                        <input name="fullname" id="dataItemsFullName" type="text" placeholder="VD: Nguyễn Văn An" class="form-control" required>
                                     </div>
-                                    <div class="text-right cart_prices">
-                                        <div class="cart__price"><span class="cart__sale-price">27.000.000₫</span></div><a class="cart__btn-remove remove-item-cart" href="javascript:void(0)" data-id="40269989" title="Bỏ sản phẩm">Bỏ sản phẩm</a></div>
-                                </div>
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input name="email" id="dataItemsEmail" type="email" placeholder="VD: email@domain.com" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone" class="form-label">Số điện thoại (*)</label>
+                                        <input name="phone" id="dataItemsPhone" type="number" placeholder="09xxxxx" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address" class="form-label">Địa chỉ (*)</label>
+                                        <input  name="address" id="dataItemsAddress" type="text" placeholder="VD: 57 Đô Đốc Lộc, P.Tân Quý, Q.Tân phú, Tp.HCM" class="form-control" required>
+                                    </div>
+                                    <div class="form-group d-none">
+                                        <input id="dataItemsOrder" name="dataItemsOrder" type="text" value="" class="form-control">
+                                    </div>
+                                    <div class="form-group d-none">
+                                        <input id="dataItemsTotal" name="dataItemsTotal" type="text" value="" class="form-control">
+                                    </div>
+                                    <button class="form-submit"><i class="fas fa-cart-arrow-down"></i> Đặt hàng</button>
+                            </form>
+                            <script>
+                                function postToGoogle2() {
+                                            $('#form-checkout .form-submit').text('Vui lòng chờ...').attr('disabled', 'disabled');
+                                            let field1 = $("#dataItemsFullName").val();
+                                            let field2 = $('#dataItemsEmail').val();
+                                            let field3 = $('#dataItemsPhone').val();
+                                            let field4 = $('#dataItemsAddress').val();
+                                            let field5 = $('#dataItemsOrder').val();
+                                            let field6 = $('#dataItemsTotal').val();
+                                            $.ajax({
+                                                url: "https://docs.google.com/forms/u/2/d/e/1FAIpQLSfQwB6U7LF9DlJMV-MWgOGmhCeNNrAErpjQB_C5EWj_uQ08gA/formResponse",
+                                                data: {
+                                                    "entry.1509385328": field1,
+                                                    "entry.761882369": field2,
+                                                    "entry.1831934275": field3,
+                                                    "entry.822591205": field4,
+                                                    "entry.838662200": field5,
+                                                    "entry.355271895": field6
+                                                },
+                                                type: "POST",
+                                                dataType: "xml",
+                                                statusCode: {
+                                                    0: function() {
+                                                        setTimeout(function() {
+                                                            $('#form-checkout .form-submit').text('Đặt hàng').removeAttr('disabled');	
+                                                            $('#checkout-modal').hide();
+                                                            $('#success-modal .phone-customer').text(field3);
+                                                            $('#success-modal').fadeToggle("slow");
+                                                            localStorage.setItem('YOUR_CART', JSON.stringify([]));
+                                                            yourCart.listProduct = [];
+                                                            yourCart.renderCartItems();
+                                                            yourCart.countItemCart();
+                                                            $('#form-checkout input').val('');
+                                                        }, 1000);
+                                                    },
+                                                    200: function() {
+                                                        setTimeout(function() {
+                                                            $('#form-checkout .form-submit').text('Đặt hàng').removeAttr('disabled');
+                                                            $('#checkout-modal').hide();
+                                                            $('#success-modal .phone-customer').text(field3);
+                                                            $('#success-modal').fadeToggle("slow");
+                                                            localStorage.setItem('YOUR_CART', JSON.stringify([]));
+                                                            yourCart.listProduct = [];
+                                                            yourCart.renderCartItems();
+                                                            yourCart.countItemCart();
+                                                            $('#form-checkout input').val('');
+                                                        }, 1000);
+                                                    }
+                                                }
+                                            });
+                                        }
+                            </script>
                             </div>
                         </div>
                     </div>
-                    <div class="cart-footer">
-                        <hr>
-                        <div class="clearfix">
-                            <div class="cart__subtotal">
-                                <div class="cart__col-6">Tổng tiền:</div>
-                                <div class="text-right cart__totle"><span class="total-price"></span></div>
-                            </div>
-                        </div>
-                        <div class="cart__btn-proceed-checkout-dt">
-                            <button type="button" class="button btn btn-default cart__btn-proceed-checkout" id="btn-proceed-checkout" title="Thanh toán">Thanh toán</button>
-                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- POPUP SUCCESS CHECKOUT -->
+        <div class="success-modal" id="success-modal" style="display: none;">
+            <div class="popup-body text-center">
+                <div class="popup-header text-center">
+                    <div class="icon"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                        </svg>
+                    </div>
+                    <h2 class="title">
+                        Bạn đã đặt hàng thành công.
+                    </h2>
+                </div>
+                <div class="success-block">
+                    <div class="success-content">
+                        Cảm ơn bạn đã đặt hàng từ website của chúng tôi. Chúng tôi sẽ liên hệ đến số điện thoại <span class="phone-customer"></span> trong thời gian sớm nhất để xác nhận đơn hàng của bạn. Nếu bạn có thắc mắc hoặc cần hỗ trợ vui lòng liên hệ đến số Hotline: <a href="tel:0366246626">036.6246.626</a> để được hỗ trợ nhanh chóng. Xin cám ơn.
+                    </div>
+                    <div class="success-footer">
+                        <a href="javascript:void(0);" class="close_modal_success">Tiếp tục mua hàng <i class="fas fa-sign-out-alt"></i></a>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,5 @@
-
+"use strict";
 $(document).ready(function ($) {
-	"use strict";
 	awe_backtotop();
 });
 /* ==== Load plugin when scroll page ==== */
@@ -61,6 +60,8 @@ $('.wrapmenu_right .nav-close').click(function(e) {
 $('.opacity_menu, .cart_btn-close').click(function(e){
 	$('.wrapmenu_right').removeClass('open_sidebar_menu');
 	$('.cart_sidebar').removeClass('active');
+	$('#checkout-modal').hide();
+	$('#success-modal').hide();
 	$('.opacity_menu').removeClass('open_opacity');
 	$('#quick-view-product').hide();
 });
@@ -86,8 +87,12 @@ $('.wrapmenu_full .menu_mobile .ul_collections li.level0 > a').click(function(e)
     $('.wrapmenu_right').removeClass('open_sidebar_menu');
 	$('.opacity_menu').removeClass('open_opacity');s
 });
-
-
+/* ==== Close opoup success ==== */
+$('.close_modal_success').click(function(e){
+	$('#success-modal').hide();
+	$('.opacity_menu').removeClass('open_opacity');
+	location.reload();
+});
 $(document).ready(function ($) {
 	/*==== Slider index ====*/
 	var swiperSlider = new Swiper('.home-slider', {
@@ -121,4 +126,8 @@ $(document).ready(function ($) {
 			},
 		},
 	});
+});
+
+$(document).ready(function ($) {
+	$(".header.wraphead_mobile").sticky({topSpacing:0});
 });
