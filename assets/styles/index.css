@@ -298,6 +298,12 @@ header.wraphead_mobile .cartsearch .carthd .mini-cart .icon_cart .text_gh {
   text-transform: uppercase;
 }
 
+@media (max-width: 1199px) and (min-width: 992px) {
+  .header-nav > ul.item_big > li.nav-item > a {
+    font-size: 1.3rem;
+  }
+}
+
 .header-nav > ul.item_big > li.nav-item > a > i {
   margin-left: 5px;
 }

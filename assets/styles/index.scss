@@ -204,6 +204,9 @@ header.wraphead_mobile {
 				text-align: left;
 				padding: 0px 0px 0 0;
 				font-size: 1.4rem;
+				@media(max-width: 1199px) and (min-width: 992px) {
+					font-size: 1.3rem;
+				}
 				font-weight: 600;
 				height: 80px;
 				line-height: 80px;

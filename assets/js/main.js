@@ -14,7 +14,7 @@ $(document).ready(function ($) {
 	$(window).on('scroll click mousemove touchstart',load_after_scroll);
 });
 
-/*--------------- Back to top button ---------------*/ 
+/*==== Back to top button ====*/
 function awe_backtotop() { 
 	if ($('.back-to-top').length) {
 		var scrollTrigger = 100,
@@ -39,7 +39,7 @@ function awe_backtotop() {
 	}
 } window.awe_backtotop=awe_backtotop;
 
-/*--------------- Open cart ---------------*/ 
+/*==== Open cart ====*/
 $('.img_hover_cart').click(function(){
 	$('.cart_sidebar').addClass('active');
 	$('.opacity_menu').toggleClass('open_opacity');
@@ -70,7 +70,7 @@ $('.js-anchor-link').click(function(e) {
     e.preventDefault();
     var target = $($(this).attr('href'));
     if (target.length) {
-        var scrollTo = target.offset().top - 30;
+        var scrollTo = target.offset().top - 100;
         $('body, html').animate({ scrollTop: scrollTo + 'px' }, 800);
     }
 });
